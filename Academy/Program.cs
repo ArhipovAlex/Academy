@@ -50,6 +50,7 @@ namespace Academy
             System.Diagnostics.Process.Start("notepad",$"{Directory.GetCurrentDirectory()}\\group.txt");
             Console.WriteLine("\n----------------------------\n");
 
+
         }
     }
 }
