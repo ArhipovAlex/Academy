@@ -28,14 +28,19 @@ namespace Academy
         {
             Console.WriteLine("GDestructor:\t" + GetHashCode());
         }
-        public void Info()
+        public override void Info()
         {
             base.Info();
-            Console.WriteLine(Subject);
+            Console.Write(Subject);
         }
         public override string ToString()
         {
-            return base.ToString()+ $" {Subject}";
+            return base.ToString()+ $",{Subject}";
+        }
+        public override void Init(string[] values)
+        {
+            base.Init(values);
+            Subject = values[8];
         }
     }
 }

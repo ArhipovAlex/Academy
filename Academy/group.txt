@@ -1,0 +1,6 @@
+Student:Pinkman,Jessie,25,Chemistry,WW_220,95,98;
+Teacher:White,Walter,50,Chemistry,20;
+Graduate:Schreder,Hank,40,Criminalistic,OBN,70,40,How to catch Haizenberg;
+Student:Vercetty,Tommy,30,Theft,Vice,98,99;
+Graduate:Rosenberg,Ken,30,Lower,Vice,45,22,How to get money back;
+Teacher:Diaz,Ricardo,50,Weapons distribution,25;

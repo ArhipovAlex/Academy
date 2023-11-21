@@ -8,6 +8,8 @@ namespace Academy
 {
     internal class Teacher:Human
     {
+        const int SPECIALITY_WIDTH = 20;
+        const int EXPERIENCE_WIDTH = 5;
         public string Speciality { get; set; }
         public int Experience { get; set; }
         public Teacher
@@ -24,14 +26,20 @@ namespace Academy
         {
             Console.WriteLine("TDestructor:\t" + GetHashCode());
         }
-        public void Info()
+        public override void Info()
         {
             base.Info();
-            Console.WriteLine($"{Speciality} {Experience} лет");
+            Console.Write($" {Speciality.PadRight(SPECIALITY_WIDTH)} {Experience.ToString().PadRight(EXPERIENCE_WIDTH)}");
         }
         public override string ToString()
         {
-            return base.ToString()+ $" {Speciality} {Experience} лет";
+            return base.ToString()+ $",{Speciality},{Experience}";
+        }
+        public override void Init(string[] values)
+        {
+            base.Init(values);
+            Speciality = values[4];
+            Experience = Convert.ToInt32(values[5]);
         }
     }
 }
