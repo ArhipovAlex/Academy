@@ -73,5 +73,9 @@ namespace AbstractGeometry
             Console.WriteLine($"Гипотенуза: {Hypotenuse()}");
             base.Info(e);
         }
+        public override void DrawHeight(PaintEventArgs e)
+        {
+            
+        }
     }
 }

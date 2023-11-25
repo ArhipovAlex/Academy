@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace AbstractGeometry
 {
-    internal class Rectangle : Shape
+    internal class Rectangle : Shape, IHaveDiagonal
     {
 
         double width;
@@ -53,13 +53,24 @@ namespace AbstractGeometry
         {
             Pen pen = new Pen(Color, LineWidth);
             e.Graphics.DrawRectangle(pen, StartX, StartY, (int)Width, (int)Height);
+            DrawDiagonal(e);
         }
         public override void Info(PaintEventArgs e)
         {
             Console.WriteLine(this.GetType());
             Console.WriteLine($"Ширина: {Width}");
             Console.WriteLine($"Высота: {Height}");
+            Console.WriteLine($"Диагональ: {GetDiagonal()}");
             base.Info(e);
+        }
+        public double GetDiagonal()
+        {
+            return Math.Sqrt(Math.Pow(Width, 2) + Math.Pow(Height, 2));
+        }
+        public void DrawDiagonal(PaintEventArgs e)
+        {
+            Pen pen = new Pen(Color, 1);
+            e.Graphics.DrawLine(pen, StartX, StartY, StartX + (float)Width, StartY + (float)Height);
         }
     }
 }

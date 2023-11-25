@@ -49,11 +49,17 @@ namespace AbstractGeometry
                 new Point(StartX+(int)Side/2,StartY+(int)Side-(int)GetHeight()),
             };
             e.Graphics.DrawPolygon(pen, points);
+            DrawHeight(e);
         }
         public override void Info(PaintEventArgs e)
         {
             Console.WriteLine($"Сторона треугольника: {Side}");
             base.Info(e);
+        }
+        public override void DrawHeight(PaintEventArgs e)
+        {
+            Pen pen=new Pen(Color,1);
+            e.Graphics.DrawLine(pen, StartX + (float)Side / 2, StartY + (float)Side, StartX+(float)Side/2,(float)(StartY+Side-GetHeight()));
         }
     }
 }

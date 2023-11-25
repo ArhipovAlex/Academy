@@ -67,5 +67,9 @@ namespace AbstractGeometry
             Console.WriteLine($"Основание треугольника: {Botton}");
             base.Info(e);
         }
+        public override void DrawHeight(PaintEventArgs e)
+        {
+
+        }
     }
 }
