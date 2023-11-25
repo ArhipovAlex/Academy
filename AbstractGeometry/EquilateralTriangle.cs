@@ -23,7 +23,10 @@ namespace AbstractGeometry
             } 
         }
         public EquilateralTriangle(double side, int start_x,int start_y,int line_width, Color color):
-            base(start_x,start_y, line_width, color){ Side = side; }
+            base(start_x,start_y, line_width, color)
+        { 
+            Side = side; 
+        }
         public override double GetHeight()
         {
             return Math.Sqrt(Math.Pow(Side, 2) - Math.Pow(Side / 2, 2));

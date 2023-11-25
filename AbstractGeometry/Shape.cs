@@ -21,7 +21,7 @@ namespace AbstractGeometry
         protected const int MAX_LENGTH = 500;
         int start_x;
         int start_y;
-        int line_width;
+        protected int line_width;
         public Color Color { get; set; }
         public int StartX
         {
